@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "outDir": "./built",
+      "allowJs": true,
+      "target": "es5",
+      "esModuleInterop": true,
+      "jsx": "react",
+      "strict": true,
+    },
+    "include": ["./src/**/*.ts"]
+  }
