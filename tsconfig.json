@@ -7,5 +7,5 @@
       "jsx": "react",
       "strict": true,
     },
-    "include": ["./src/**/*.ts"]
+    "include": ["./src/**/*.ts", "src/containers/LogIn/index.tsx", "src/containers/Contacts/index.tsx"]
   }
