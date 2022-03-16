@@ -6,6 +6,7 @@
       "esModuleInterop": true,
       "jsx": "react",
       "strict": true,
+      "noImplicitAny": false,
     },
     "include": ["./src/**/*.ts", "src/containers/LogIn/index.tsx", "src/containers/Contacts/index.tsx"]
   }
