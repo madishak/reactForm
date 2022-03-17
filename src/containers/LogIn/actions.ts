@@ -3,17 +3,16 @@ import {
     LOGIN_FETCH_SUCCESS,
     LOGIN_FETCH_FAILURE,
   } from "../../constants";
-//   import { Book } from "../../types";
   
-  export const loginFetchRequest = (username, pass) => ({
+  export const loginFetchRequest = (inputs) => ({
       type: LOGIN_FETCH_REQUEST,
-      username, 
-      pass,
+      inputs,
   })
   
-  export const loginFetchSuccess = (users) => ({
+  export const loginFetchSuccess = (users, inputs) => ({
       type: LOGIN_FETCH_SUCCESS,
-      users,      
+      users,     
+      inputs, 
   })
   
   export const loginFetchFailure = (message: Error) => ({

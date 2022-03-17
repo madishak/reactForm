@@ -3,8 +3,6 @@ import {
     LOGIN_FETCH_SUCCESS,
     LOGIN_FETCH_FAILURE,
   } from "../../constants";
-//   import { BooksAction } from "../../types";
-
 
   const users = (state = {}, action) => {
     switch (action.type) {
@@ -12,9 +10,14 @@ import {
         return state;
       }
       case LOGIN_FETCH_SUCCESS: {
-        const { users } = action;
+        const { users, inputs } = action;
+        let allowAuthorization = false;
+        users.forEach(({username}) => username === inputs.username ? allowAuthorization = true : allowAuthorization)
+      
         console.log(users)
-        return { ...state, users };
+        // console.log('R', inputs)
+        // console.log(allowAuthorization)
+        return { ...state, users, allowAuthorization };
       }
       case LOGIN_FETCH_FAILURE: {
         const { message } = action;
