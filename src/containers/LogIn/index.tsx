@@ -47,7 +47,7 @@ const LogIn = (props) => {
   };
 
   const handleSubmit = (evt: React.FormEvent<HTMLFormElement>) => {
-    // evt.preventDefault();
+    evt.preventDefault();
     
     console.log(inputs);
     dispatch({ type: LOGIN_FETCH_REQUEST, inputs });
